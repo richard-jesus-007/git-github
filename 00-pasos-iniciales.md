@@ -13,7 +13,11 @@ git config --global user.email "1########+richard-jesus-007@users.noreply.github
 ```
 
 ## 2. Vinculación con el Repositorio Remoto
-Para trabajar de forma sincronizada, se utilizó el comando de clonación. Esto crea una copia exacta del repositorio de la nube en la carpeta local de la **Predator Neo**.
+
+> [!IMPORTANT]
+> Cabe mencionar que primero se creó un repositorio **git-github** en la web de forma pública y **sin README.md** (repositorio vacío).
+
+Para trabajar de forma sincronizada, se utilizó el comando de clonación. Esto crea una copia exacta del repositorio de la nube en la carpeta local.
 
 ```bash
 # Ubicarse en la carpeta de documentos
@@ -56,7 +60,7 @@ git commit -m "Estructura inicial de la Wiki de aprendizaje"
 # Subir tus nuevos archivos a la nube
 git push origin main
 ```
-## 🔐 1. Autenticación Segura (Personal Access Tokens)
+## 🔐 Autenticación Segura (Personal Access Tokens)
 
 GitHub ya no permite el uso de contraseñas comunes para operaciones desde la terminal (Git Bash) por razones de seguridad. En su lugar, utilizamos un **PAT (Personal Access Token)**, que actúa como una llave maestra con permisos específicos.
 
@@ -80,10 +84,6 @@ Sigue esta ruta en la interfaz web de GitHub:
 ---
 
 ### 🚀 Uso del Token en la Terminal
-Cuando ejecutes tu primer comando de subida:
+en la ventana emergente: peguemos el toquen *ghp_xi####################...*
 
-```bash
-git push origin main
-Despues del git push me pedira mi token el cuale lo creo dentro de github profile--> settings-->tokens
 
-ghp_xi####################...
