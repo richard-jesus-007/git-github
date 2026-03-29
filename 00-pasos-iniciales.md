@@ -1,14 +1,5 @@
-¡Excelente elección! La **Estructura de Wiki** es la más escalable para un ingeniero. Al tener tu **Predator Neo** con VS Code, podrás navegar entre archivos con `Ctrl + P` de forma súper rápida.
-
-Ya que tienes tus 4 archivos creados dentro de la carpeta clonada `git-github`, el siguiente paso lógico es **"Registrar la estructura en Git"** para que dejen de ser archivos "fantasma" (untracked) y pasen a ser parte de tu historial.
-
-Aquí tienes la documentación para tu archivo **`00-pasos-iniciales.md`**, estructurada para que sea tu guía de referencia:
-
----
-
 # 🟢 00. Pasos Iniciales: De la Instalación al Repositorio
-
-Este archivo documenta el proceso de preparación del entorno y la creación de la estructura base del curso.
+Este archivo documenta el proceso de preparación del entorno, la configuración de identidad y la creación de la estructura base del curso tras la instalación de Git.
 
 ## 1. Identidad en el Sistema (Post-Instalación)
 Antes de realizar cualquier operación, se configuró la identidad global en **Git Bash** para asegurar que los créditos de los cambios pertenezcan a mi cuenta de GitHub.
@@ -18,7 +9,7 @@ Antes de realizar cualquier operación, se configuró la identidad global en **G
 git config --global user.name "richard-jesus-007"
 
 # Configuración del correo de privacidad (obtenido de GitHub Settings > Emails)
-git config --global user.email "106361800+richard-jesus-007@users.noreply.github.com"
+git config --global user.email "1########+richard-jesus-007@users.noreply.github.com"
 ```
 
 ## 2. Vinculación con el Repositorio Remoto
