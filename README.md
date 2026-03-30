@@ -1,53 +1,40 @@
-# 🚀 Git & GitHub Mastery: Wiki de Ingeniería
-Bienvenido a mi repositorio de aprendizaje y documentación técnica sobre control de versiones. Este espacio está diseñado como una guía autogestionada para dominar el flujo de trabajo desde la **Predator Neo** hasta el despliegue en la nube.
+# 🚀 Git & GitHub Mastery: Guía de Aprendizaje
+Bienvenido a mi repositorio de documentación técnica. Este espacio ha sido creado para registrar el proceso de aprendizaje y configuración del flujo de trabajo con Git, desde mi equipo local hasta la nube.
 
 ---
 
-## 👨‍💻 Perfil del Autor
+## 💻 Entorno de Trabajo
 * **Usuario:** richard-jesus-007
-* **Enfoque:** Automatización de Ingeniería, Sistemas y Desarrollo Seguro.
-* **Hardware:** Acer Predator Helios Neo 16 (PHN16S-71).
+* **Sistema:** Windows 11 (x64), Debian 13
+* **Terminal:** Git Bash (MINGW64)
+* **Editor:** Visual Studio Code
 
 ---
 
 ## 🗂️ Índice de Contenidos
-Explora los módulos de aprendizaje en orden lógico para dominar la herramienta:
+Explora los módulos de aprendizaje organizados para una consulta rápida:
 
 | Módulo | Descripción | Estado |
 | :--- | :--- | :---: |
-| [🟢 00. Pasos Iniciales](./00-pasos-iniciales.md) | Instalación, Prompt y configuración de identidad global. | ✅ |
-| [🛠️ 01. Fundamentos de Git](./01-fundamentos-git.md) | Ciclo de vida: Working Directory, Staging y Local Repo. | ✅ |
-| [🌐 02. Flujo Remoto](./02-flujo-remoto-github.md) | Conexión con GitHub, seguridad con Tokens y Push/Pull. | ✅ |
-| [🚀 03. Colaboración Avanzada](./03-colaboracion-avanzada.md) | Gestión de Ramas (Branches), Forks y Pull Requests. | ✅ |
-| [📖 04. Glosario de Términos](./04-definiciones.md) | Definiciones críticas de estados y conceptos base. | 📝 |
-| [🛡️ 05. Buenas Prácticas](./05-errores-y-consejos.md) | Consejos para evitar conflictos y errores de unión. | 📝 |
+| [🟢 00. Pasos Iniciales](./00-pasos-iniciales.md) | Instalación y configuración de identidad. | ✅ |
+| [🛠️ 01. Fundamentos de Git](./01-fundamentos-git.md) | Ciclo de vida y estados de los archivos. | ✅ |
+| [🌐 02. Flujo Remoto](./02-flujo-remoto-github.md) | Conexión con GitHub y seguridad con Tokens. | ✅ |
+| [🚀 03. Colaboración Avanzada](./03-colaboracion-avanzada.md) | Gestión de Ramas (Branches) y Pull Requests. | ✅ |
+| [📖 04. Glosario de Términos](./04-definiciones.md) | Definiciones críticas de conceptos base. | 📝 |
+| [🛡️ 05. Buenas Prácticas](./05-errores-y-consejos.md) | Guía para evitar errores comunes en el flujo. | 📝 |
 
 ---
-
-## 🛠️ Tecnologías y Herramientas
-* **Terminal:** Git Bash (MINGW64).
-* **Editor:** Visual Studio Code (`code --wait`).
-* **Autenticación:** Personal Access Tokens (PAT).
-* **Entorno:** Windows 11 (Arquitectura x64).
-
----
-
 
 ## 💡 ¿Por qué esta Wiki?
-> "La ingeniería no es solo resolver problemas; es documentar la solución para que el **'yo del futuro'** no tenga que resolverlo dos veces."
+> "Documentar es la mejor forma de asegurar que el aprendizaje sea permanente."
 
-Este repositorio es un aporte personal para mi crecimiento como Ingeniero. He decidido usar mi **Usuario de GitHub** (`richard-jesus-007`) en todas las configuraciones para mantener una identidad técnica consistente, profesional y privada. 
+Este repositorio es un aporte para mi **"yo del futuro"**. Decidí usar mi usuario de GitHub (`richard-jesus-007`) para mantener una identidad consistente, profesional y privada en cada cambio realizado; estoy seguro de que me lo agradeceré cada vez que lo consulte.
 
 ### ⭐ Apoya este proyecto
-Si este contenido te ha sido de utilidad para tus propios estudios o proyectos:
-* **Regálame una estrella (Star):** Haz clic en el botón ⭐ en la parte superior derecha de esta página. ¡Me ayuda mucho a saber que el material es útil!
-* **Contribuye:** Si encuentras un error o tienes una mejora, no dudes en abrir un **Pull Request**.
-* **Donaciones:** Si deseas apoyar el mantenimiento de este y otros proyectos de ingeniería, puedes realizar una donación voluntaria. ¡Toda ayuda es bienvenida para seguir documentando!
-
----
-
-## 📬 Contacto y Colaboración
-Si encuentras errores o tienes sugerencias, puedes abrir un **Issue** o iniciar una **Discussion** en este repositorio.
+Si este material te resulta útil para tus propios estudios:
+* **Regálame una estrella (Star):** Me ayuda a saber que el contenido es valioso.
+* **Colabora:** Si encuentras algo que mejorar, los **Pull Requests** son bienvenidos.
+* **Donaciones:** Si deseas apoyar este proyecto, puedes realizar una contribución voluntaria. ¡Cualquier apoyo es bien recibido!
 
 ---
 _Última actualización: Marzo 2026_
