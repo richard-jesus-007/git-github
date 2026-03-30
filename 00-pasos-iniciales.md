@@ -2,20 +2,20 @@
 Este archivo documenta el proceso de preparación del entorno, la configuración de identidad y la creación de la estructura base del curso tras la instalación de Git.
 
 ## 1. Descarga e Instalación
-Para comenzar, descargamos el instalador oficial compatible con la arquitectura de la **Predator Neo**.
+Para comenzar, descargamos el instalador oficial compatible con la arquitectura de tu sistema operativo, para mi caso **Windows 11**.
 
 * **Sitio oficial:** [git-scm.com](https://git-scm.com/)
 * **Versión utilizada:** `Git-2.53.0.2-64-bit.exe` (Arquitectura x64)
 
 
-solo poner siguiente siguiente en todas las configuraciones que validaremos despues las configuracion
+> **Instrucción:** Durante la instalación, puedes dejar las opciones por defecto ("Next" en todo), ya que ajustaremos las configuraciones críticas manualmente desde la terminal más adelante.
 
 ---
 
 ## 2. Vista Inicial Post-Instalación (Git Bash)
 Al abrir la terminal por primera vez, nos encontramos con la interfaz de línea de comandos. Es vital entender qué significa cada parte del **Prompt** (indicador de comandos).
 
-Tus datos no seran sismilares el ejemplo es de mi propia teminal
+Tus datos no seran iguales a el ejemplo, es de mi propia terminal 
 ### Ejemplo de mi propia terminal:
 ```bash
 user@Predator-Neo MINGW64 ~
@@ -25,79 +25,60 @@ git version 2.53.0.windows.2
 user@Predator-Neo MINGW64 ~
 $
 ```
-`user`: Usuario actual de la computadora.
-
-`Predator-Neo`: Identificador único del dispositivo (Hostname).
-
-`MINGW64`: Indica el entorno de emulación de Unix (64 bits) que usa Git Bash en Windows.
-
-`~`: Representa el Directorio Raíz (Home) de nuestro sistema de archivos para el usuario actual.
-
-`$`: Indicador de usuario. Significa que la terminal está lista para recibir órdenes y que tienes privilegios de usuario normal.
-`git --version`: comando que indica la version de git
-`git version 2.53.0.windows.2`: resultado que indica la version de git en el computador
+**Anatomía del Prompt:**
+* `user`: Usuario actual de la computadora.
+* `Predator-Neo`: Identificador único del dispositivo (Hostname).
+* `MINGW64`: Entorno de emulación de Unix (64 bits) en Windows.
+* `~`: Representa el **Directorio Raíz** (Home) de tu sistema de archivos.
+* `$`: Indicador de que la terminal está lista y eres un usuario normal.
+* `git --version`: Comando que ejecute para verificar la versión instalada.
+* `git version 2.53.0.windows.2`: Resultado del anterior comando.
 
 ## 3. Identidad en el Sistema (Post-Instalación)
 Antes de realizar cualquier operación, se configuró la identidad global en **Git Bash** para asegurar que los créditos de los cambios pertenezcan a mi cuenta de GitHub.
 
-La direccion la estoy sacando de github`-->` foto de perfil`-->` Settings`-->` email
+> **Nota del Autor:** Decidí usar mi usuario de GitHub para mantener una identidad técnica consistente, profesional y privada entre mi entorno local y mi perfil global. Puedes obtener tu correo de privacidad en: **Foto de perfil -> Settings -> Emails**.
 
-
-Decidí usar richard-jesus-007 para mantener una identidad técnica consistente, profesional y privada entre mi entorno local y mi perfil global en GitHub. puedes usar el tuyo
-
-"richard-jesus-007" cambia por tu propio usuario
-y tambien cambia por tu propio correo de github
-"*********+richard-jesus-007@users.noreply.github.com"
+### Configuración de Identidad
+Sustituye los valores de `"richard-jesus-007"`, `"*********+richard-jesus-007@users.noreply.github.com"` y por tu propio usuario y correo:
 ```bash
-# Configuración del nombre de usuario
+# Configuración de mi nombre de autor
 git config --global user.name "richard-jesus-007"
 
-# Configuración del correo de privacidad (obtenido de GitHub Settings > Emails)
+# Configuración de mi correo de privacidad
 git config --global user.email "*********+richard-jesus-007@users.noreply.github.com"
 ```
-configuraciones del entorno del trabajo
+### Configuración del Entorno de Trabajo
+Aplica estos comandos para optimizar cómo Git interactúa con tu sistema y con VS Code:
+estos valores puedes copiarlos tal como estan
 
-Para optimizar el flujo de trabajo  se aplicaron las siguientes configuraciones de sistema:
-
-* **Rama Principal:** `` (Estándar de GitHub).
-* **Editor de Texto:** `"` (Integración con VS Code).
-* **Compatibilidad de archivos:** `git config --global core.autocrlf true` (Corrección de finales de línea Windows/Unix).
 ```bash
-# * **Rama Principal:** `` (Estándar de GitHub).
+# Definir 'main' como la rama principal por defecto
 git config --global init.defaultBranch main
 
-# * **Editor de Texto:** `"` (Integración con VS Code).
+# Vincular VS Code como editor de texto predeterminado
 git config --global core.editor "code --wait"
-# * **Compatibilidad de archivos:** `git config --global core.autocrlf true` (Corrección de finales de línea Windows/Unix).
+
+# Corregir automáticamente los finales de línea (Windows/Unix)
 git config --global core.autocrlf true
-
-
-
 ```
+
 > [!TIP]
-> **VS Code Zoom:** para ajustar el tamaño del texto rápidamente con `Ctrl + Scroll`.
+> **git Bash:** para ajustar el tamaño del texto rápidamente con `Ctrl + Scroll`.
 
-*********
-## 4. Creacion de Repositorio Remotoen GitHub
+## 4. Creación del Repositorio Remoto en GitHub
+Dirígete a [github.com](https://github.com/), inicia sesión y sigue estos pasos:
 
-ir a la direccion https://github.com/
-
-hacer el proceso de logeo con tu respestiva cuenta 
-
-escoje la opcion de ``New`` se abriara una opcion `Create a new repository` y `Escribe en repostitory name`: puedes agregar una descripcion
-en confioguracion escoje public, add readme (para este caso no) puedes agregar un git ignore y escojer tu licensia para ver que hacen con tu repsositorio
-
-
+1. Haz clic en el botón **"New"** para crear un repositorio.
+2. En **Repository name**, escribe el nombre de tu proyecto para este ejemplo: `git-github`.
+3. Selecciona **Public** y, para este ejercicio, **no** marques la casilla de "Add a README file".
+4. Los demas valores de **.gitignore** y **license** los dejamos por defecto.
+4. Haz clic en **Create repository**.
 
 ## 5. Vinculación con el Repositorio Remoto
-
-
 Para trabajar de forma sincronizada, se utilizó el comando de clonación. Esto crea una copia exacta del repositorio de la nube en la carpeta local.
 
-he creado una carpeta `curso-github` dentro `Documents`
-
-Cambia `curso-github` por tu propio nombre de carpeta
-cambia https://github.com/richard-jesus-007/git-github.git por tu propia url del repositorio
+> **Mi estructura:** He creado una carpeta llamada `curso-github` dentro de mi carpeta de `Documents` para organizar mis estudios.
 
 ```bash
 # Ubicarse en la carpeta de documentos
@@ -111,7 +92,7 @@ cd git-github
 ```
 
 ## 6. Creación de la Estructura de "Wiki"
-Se optó por una organización modular para facilitar la consulta rápida de comandos y conceptos. Se crearon los siguientes archivos base:
+Se optó por una organización modular para facilitar la consulta rápida de comandos y conceptos. Se crearon los siguientes archivos base a medida que cresca el proyecto ire agregando mas archivos:
 
 * `README.md`: Índice principal y presentación.
 * `00-pasos-iniciales.md`: Preparación y clonación (Este archivo).
@@ -122,35 +103,16 @@ Se optó por una organización modular para facilitar la consulta rápida de com
 > 💡 **Tip Técnico:** En VS Code, puedes usar el comando `touch` en la terminal integrada para crear estos archivos rápidamente:
 > `touch README.md 00-pasos-iniciales.md 01-fundamentos-git.md 02-flujo-remoto-github.md 03-colaboracion-avanzada.md`
 
-## 7. Paso previo para subir nuevos archivos al reposirotio
+## 7. Autenticación Segura (Personal Access Tokens)
+GitHub requiere un **PAT (Personal Access Token)** para subir cambios desde la terminal.
 
-## 🔐 Autenticación Segura (Personal Access Tokens)
-
-GitHub ya no permite el uso de contraseñas comunes para operaciones desde la terminal (Git Bash) por razones de seguridad. En su lugar, utilizamos un **PAT (Personal Access Token)**, que actúa como una llave maestra con permisos específicos.
-
-### 🛠️ Pasos para generar el Token
-Sigue esta ruta en la interfaz web de GitHub:
-
-1. **Acceso:** Foto de Perfil (derecha superior) → `Settings`.
-2. **Desarrollador:** En la barra lateral izquierda, al final: `<> Developer settings`.
-3. **Tokens:** `Personal access tokens` → `Tokens (classic)`.
-4. **Creación:** Botón `Generate new token` → `Generate new token (classic)`.
-
-#### Configuración recomendada:
-* **Note:** `token-de-validacion`
-* **Expiration:** `90 days` (recomendado para seguridad).
-* **Select scopes:** Selecciona la casilla **`repo`** (esto permite control total sobre tus repositorios privados y públicos).
-* **Finalizar:** Clic en `Generate token`.
+### Pasos para generar tu Token:
+1. **Settings** -> **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**.
+2. Genera un nuevo token con una nota descriptiva y una expiración de **90 días**.
+3. **Importante:** Selecciona el scope **`repo`**.
 
 > [!CAUTION]
-> **IMPORTANTE:** Copia tu propio que empieza con `ghp_************************************` y guárdalo en un lugar seguro. **No se volverá a mostrar** y lo necesitarás para tu primer envío desde la terminal.
-
-
-guarda tu token en la ventana de validacion que se abrira con y ahi valides en una ventana emergente y escoje la opcion de token   `git push origin main`
-
- `ghp_************************************`
-
-
+> **SEGURIDAD:** Copia tu código `ghp_***` inmediatamente. No se volverá a mostrar. **Nunca lo incluyas en tus archivos de texto públicos.**
 
 ## 8. Estado Actual del Repositorio
 
@@ -169,6 +131,7 @@ git add .
 # Realizar el commit inicial de la estructura
 git commit -m "Estructura inicial de la Wiki de aprendizaje"
 
-# Subir tus nuevos archivos a la nube, aqui te pedira tu token del paso anterior
+# Subo los archivos a GitHub
+# Aquí se abrirá una ventana emergente: elige "Token" y pega tu código ghp_...
 git push origin main
 ```
