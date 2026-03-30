@@ -41,25 +41,31 @@ Antes de realizar cualquier operación, se configuró la identidad global en **G
 
 ### Configuración de Identidad
 Sustituye los valores de `"richard-jesus-007"`, `"*********+richard-jesus-007@users.noreply.github.com"` y por tu propio usuario y correo:
-```bash
-# Configuración de mi nombre de autor
-git config --global user.name "richard-jesus-007"
 
-# Configuración de mi correo de privacidad
+Configuración de mi nombre de autor
+```bash
+git config --global user.name "richard-jesus-007"
+```
+
+Configuración de mi correo de privacidad
+```bash
 git config --global user.email "*********+richard-jesus-007@users.noreply.github.com"
 ```
 ### Configuración del Entorno de Trabajo
 Aplica estos comandos para optimizar cómo Git interactúa con tu sistema y con VS Code:
 estos valores puedes copiarlos tal como estan
 
+Definir 'main' como la rama principal por defecto
 ```bash
-# Definir 'main' como la rama principal por defecto
 git config --global init.defaultBranch main
-
-# Vincular VS Code como editor de texto predeterminado
+```
+Vincular VS Code como editor de texto predeterminado
+```bash
 git config --global core.editor "code --wait"
+```bash
 
 # Corregir automáticamente los finales de línea (Windows/Unix)
+```bash
 git config --global core.autocrlf true
 ```
 
