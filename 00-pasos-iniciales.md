@@ -62,9 +62,9 @@ git config --global init.defaultBranch main
 Vincular VS Code como editor de texto predeterminado
 ```bash
 git config --global core.editor "code --wait"
-```bash
+```
 
-# Corregir automáticamente los finales de línea (Windows/Unix)
+Corregir automáticamente los finales de línea (Windows/Unix)
 ```bash
 git config --global core.autocrlf true
 ```
@@ -139,5 +139,50 @@ git commit -m "Estructura inicial de la Wiki de aprendizaje"
 
 # Subo los archivos a GitHub
 # Aquí se abrirá una ventana emergente: elige "Token" y pega tu código ghp_...
+# Si estas en Debian 13 no hagas este paso, pasa a la siguiente seccion
 git push origin main
 ```
+
+
+## 🔐 Autenticación Permanente en Debian 13 (PAT)
+
+A diferencia de otros sistemas que usan ventanas emergentes gráficas, en la terminal de **Debian** configuramos un "ayudante de credenciales" para que el sistema recuerde tu **Personal Access Token (PAT)** y no tengas que pegarlo en cada operación.
+
+### 1. Configuración del Almacenamiento
+Primero, indicamos a Git que guarde las credenciales en el disco local de forma persistente:
+
+```bash
+# Configurar el helper para recordar el token indefinidamente
+git config --global credential.helper store
+```
+
+### 2. Validación y Primer Envío
+Al ejecutar el envío por primera vez tras la configuración, la terminal solicitará tus datos. **Es aquí donde vinculamos el token**:
+
+```bash
+# Iniciar la subida al repositorio remoto
+git push origin main
+```
+
+#### Interacción en la Terminal:
+* **Username:** Escribe tu usuario (`richard-jesus-007`).
+* **Password:** Pega tu token (ej. `ghp_************************************`). 
+    > *Nota: Al pegar el token en Linux, no se verán caracteres ni asteriscos por seguridad. Solo pégalo y presiona Enter.*
+
+### 3. Verificación del Proceso (Log de Salida)
+Si la validación es correcta, verás un resumen similar al siguiente, confirmando que los objetos fueron comprimidos y enviados:
+
+```bash
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/richard-jesus-007/git-github.git
+   aede25b..754cbda  main -> main
+```
+
+> [!IMPORTANT]
+> **Persistencia:** Gracias al comando `store`, a partir de este momento, cualquier `git push` o `git pull` se realizará de forma automática sin pedirte credenciales nuevamente.
